@@ -23,10 +23,28 @@ jobs:
           node-version: 16
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+
+      - name: 🗂 Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: 🔧 Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: ✅ Install dependencies
+        run: pnpm install
 
       - name: 🔬 Lint
-        run: yarn lint:strict
+        run: pnpm lint:strict
 
   typecheck:
     name: ʦ TypeScript
@@ -44,10 +62,28 @@ jobs:
           node-version: 16
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+
+      - name: 🗂 Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: 🔧 Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: ✅ Install dependencies
+        run: pnpm install
 
       - name: 🔎 Type check
-        run: yarn typecheck
+        run: pnpm typecheck
 
   prettier:
     name: 💅 Prettier
@@ -65,10 +101,28 @@ jobs:
           node-version: 16
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+
+      - name: 🗂 Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: 🔧 Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: ✅ Install dependencies
+        run: pnpm install
 
       - name: 🔎 Type check
-        run: yarn format:check
+        run: pnpm format:check
 
   test:
     name: 🃏 Test
@@ -86,7 +140,25 @@ jobs:
           node-version: 16
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+
+      - name: 🗂 Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: 🔧 Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: ✅ Install dependencies
+        run: pnpm install
 
       - name: 🃏 Run jest
-        run: yarn test
+        run: pnpm test
