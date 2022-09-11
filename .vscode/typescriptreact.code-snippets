@@ -2,9 +2,7 @@
   //#region  //*=========== React ===========
   "import React": {
     "prefix": "ir",
-    "body": [
-      "import * as React from 'react';"
-    ]
+    "body": ["import * as React from 'react';"]
   },
   "React.useState": {
     "prefix": "us",
@@ -14,11 +12,7 @@
   },
   "React.useEffect": {
     "prefix": "uf",
-    "body": [
-      "React.useEffect(() => {",
-      "  $0",
-      "}, []);"
-    ]
+    "body": ["React.useEffect(() => {", "  $0", "}, []);"]
   },
   "React.useReducer": {
     "prefix": "ur",
@@ -30,9 +24,7 @@
   },
   "React.useRef": {
     "prefix": "urf",
-    "body": [
-      "const ${1:someRef} = React.useRef($0)"
-    ]
+    "body": ["const ${1:someRef} = React.useRef($0)"]
   },
   "React Functional Component": {
     "prefix": "rc",
@@ -163,43 +155,29 @@
   },
   "Import useRouter": {
     "prefix": "imust",
-    "body": [
-      "import { useRouter } from 'next/router';"
-    ]
+    "body": ["import { useRouter } from 'next/router';"]
   },
   "Import Next Image": {
     "prefix": "imimg",
-    "body": [
-      "import Image from 'next/image';"
-    ]
+    "body": ["import Image from 'next/image';"]
   },
   "Import Next Link": {
     "prefix": "iml",
-    "body": [
-      "import Link from 'next/link';"
-    ]
+    "body": ["import Link from 'next/link';"]
   },
   //#endregion  //*======== Nextjs ===========
   //#region  //*=========== Snippet Wrap ===========
   "Wrap with Fragment": {
     "prefix": "ff",
-    "body": [
-      "<>",
-      "\t${TM_SELECTED_TEXT}",
-      "</>"
-    ]
+    "body": ["<>", "\t${TM_SELECTED_TEXT}", "</>"]
   },
   "Wrap with clsx": {
     "prefix": "cx",
-    "body": [
-      "{clsx(${TM_SELECTED_TEXT}$0)}"
-    ]
+    "body": ["{clsx(${TM_SELECTED_TEXT}$0)}"]
   },
   "Wrap with clsxm": {
     "prefix": "cxm",
-    "body": [
-      "{clsxm(${TM_SELECTED_TEXT}$0, className)}"
-    ]
+    "body": ["{clsxm(${TM_SELECTED_TEXT}$0, className)}"]
   },
   //#endregion  //*======== Snippet Wrap ===========
   "Logger": {
