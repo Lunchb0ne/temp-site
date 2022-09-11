@@ -11,9 +11,7 @@ module.exports = {
   //   domains: [
   //     'res.cloudinary.com',
   //   ],
-  // },
 
-  experimental: { images: { allowFutureImage: true } },
   // SVGR
   webpack(config) {
     config.module.rules.push({
