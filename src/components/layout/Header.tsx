@@ -11,7 +11,7 @@ const links = [
 export default function Header() {
   return (
     <header className='sticky top-0 z-50 bg-white'>
-      <div className='layout flex h-14 items-center justify-between'>
+      <div className='flex items-center justify-between layout h-14'>
         <UnderlineLink href='/' className='font-bold hover:text-gray-600'>
           Home
         </UnderlineLink>

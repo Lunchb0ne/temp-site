@@ -45,7 +45,7 @@ export default function ComponentsPage() {
               Back to Home
             </ArrowLink>
 
-            <div className='mt-8 flex flex-wrap gap-2'>
+            <div className='flex flex-wrap mt-8 gap-2'>
               <Button
                 onClick={toggleMode}
                 variant={mode === 'dark' ? 'light' : 'dark'}
@@ -86,35 +86,35 @@ export default function ComponentsPage() {
                     Check list of colors
                   </ButtonLink>
                 </div>
-                <div className='flex flex-wrap gap-2 text-xs font-medium'>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-50 text-black'>
+                <div className='flex flex-wrap text-xs font-medium gap-2'>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-50'>
                     50
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-100 text-black'>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-100'>
                     100
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-200 text-black'>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-200'>
                     200
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-300 text-black'>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-300'>
                     300
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-400 text-black'>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-400'>
                     400
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-500 text-black'>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-500'>
                     500
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-600 text-white'>
+                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-600'>
                     600
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-700 text-white'>
+                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-700'>
                     700
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-800 text-white'>
+                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-800'>
                     800
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-900 text-white'>
+                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-900'>
                     900
                   </div>
                 </div>
